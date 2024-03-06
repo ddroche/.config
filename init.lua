@@ -89,7 +89,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.g.ruby_host_program = '~/.rbenv/versions/3.2.2/bin/neovim-ruby-host'
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -184,6 +184,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('', '<leader>f', function()
+  require('conform').format { async = true, lsp_fallback = true }
+end)
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -543,7 +546,11 @@ require('lazy').setup {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {},
         eslint = {},
-        rubocop = {},
+        rubocop = {
+          root_dir = require('lspconfig').util.root_pattern '$HOME/.rbenv/shims/rubocop',
+          cmd = { 'rubocop', '--lsp' },
+          fileTypes = { 'ruby' },
+        },
         sqlls = {},
         --
 
@@ -608,6 +615,7 @@ require('lazy').setup {
 
   { -- Autoformat
     'stevearc/conform.nvim',
+
     opts = {
       notify_on_error = false,
       format_on_save = {
@@ -620,7 +628,7 @@ require('lazy').setup {
         erb = { 'erb_format' },
         go = { 'goimports', 'golines', 'gofmt' },
         json = { 'jq' },
-        ruby = { 'rubocop', 'rubyfmt' },
+        ruby = { 'rubocop' },
         sql = { 'sqlfmt' },
         css = { 'stylelint' },
         -- Conform can also run multiple formatters sequentially

@@ -4,3 +4,6 @@ linearmouse/
 iterm2/
 flipper/
 configstore/
+
+# Ignore .bak files (backups)
+*.bak

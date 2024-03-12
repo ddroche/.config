@@ -1,7 +1,6 @@
-tags
-test.sh
-.luarc.json
-nvim
-
-spell/
-lazy-lock.json
+# Ignore Unwanted Folders on Personal MBP
+op/
+linearmouse/
+iterm2/
+flipper/
+configstore/

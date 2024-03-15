@@ -4,6 +4,7 @@ linearmouse/
 iterm2/
 flipper/
 configstore/
-
+doom/
+emacs/
 # Ignore .bak files (backups)
 *.bak

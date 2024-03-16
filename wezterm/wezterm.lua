@@ -11,13 +11,13 @@ end
 -- This is where you actually apply your config choices
 
 -- Font Config
-local base_font = 'Monaspace Argon'
+local base_font = 'Monaspace Neon'
 local string_font = 'FiraCode Nerd Font'
 local comment_font = 'Maple Mono'
 local diagnostics_font = 'Monaspace Krypton'
 
 -- Regular
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.font = wezterm.font({
    family = base_font,
    weight = 'Regular',

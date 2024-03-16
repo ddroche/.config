@@ -8,3 +8,7 @@ doom/
 emacs/
 # Ignore .bak files (backups)
 *.bak
+
+# Ignore Copilot Conifg
+github-copilot/
+

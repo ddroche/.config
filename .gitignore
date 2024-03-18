@@ -12,3 +12,26 @@ emacs/
 # Ignore Copilot Conifg
 github-copilot/
 
+# Ignore AWS Config
+AWS* 
+
+# codewhisper config
+cw/
+
+#fish shell
+fish/
+
+# fonts
+fonts/
+
+# jgit
+jgit/
+
+# yarn
+yarn/
+
+# raycast
+raycast/
+
+# cheat
+cheat/ 

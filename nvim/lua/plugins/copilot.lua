@@ -2,7 +2,7 @@ return {
   "zbirenbaum/copilot.lua",
   opts = {
     suggestion = {
-      enabled = true,
+      enabled = false,
       keymap = {
         accept = "<C-y>",
         next = "<leader>ccn",

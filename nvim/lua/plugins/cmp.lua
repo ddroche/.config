@@ -14,8 +14,6 @@ return {
     },
     opts = function(_, opts)
       local cmp = require("cmp")
-      table.insert(opts.sources, { name = "copilot-cmp" })
-      table.insert(opts.sources, { name = "cmp-dap" })
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.

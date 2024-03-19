@@ -1,5 +1,6 @@
 return {
   { "olimorris/neotest-rspec" },
+  { "zidhuss/neotest-minitest" },
   { "mrcjkb/rustaceanvim" },
   {
     "nvim-neotest/neotest",
@@ -9,6 +10,7 @@ return {
       "nvim-neotest/neotest-go",
       "mrcjkb/rustaceanvim",
       "olimorris/neotest-rspec",
+      "zidhuss/neotest-minitest",
     },
     opts = {
       ["neotest-jest"] = {
@@ -20,6 +22,17 @@ return {
       },
       ["neotest-rspec"] = {
         rspecCommand = "bundle exec rspec",
+        cwd = function()
+          return vim.fn.getcwd()
+        end,
+      },
+      ["neotest-minitest"] = {
+        test_cmd = function()
+          return vim.tbl_flatten({
+            "ruby",
+            "-Itest",
+          })
+        end,
         cwd = function()
           return vim.fn.getcwd()
         end,

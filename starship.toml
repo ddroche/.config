@@ -8,9 +8,9 @@ palette = "catppuccin_macchiato"
 add_newline = true
 
 [character]
-success_symbol = '[➜](green) '
-error_symbol = '[!!](red) '
-vicmd_symbol = '[:](yellow) '
+success_symbol = '[➜](green)'
+error_symbol = '[!!](red)'
+vimcmd_symbol = '[:](yellow)'
 
 [aws]
 symbol = "  "

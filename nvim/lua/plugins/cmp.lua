@@ -17,16 +17,13 @@ return {
       table.insert(opts.sources, { name = "copilot-cmp" })
       table.insert(opts.sources, { name = "cmp-dap" })
 
-      opts.mapping = vim.tbl_extend(
-        "force",
-        opts.mapping({
-          ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-          ["<S-CR>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = false,
-          }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        })
-      )
+      opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<S-CR>"] = cmp.mapping.confirm({
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = false,
+        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      })
       -- Enable Supertab
       -- local has_words_before = function()
       --   unpack = unpack or table.unpack

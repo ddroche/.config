@@ -1,0 +1,21 @@
+Generate the autocompletion script for  for the specified shell.
+See each sub-command's help for details on how to use the generated script.
+
+Usage:
+   completion [command]
+
+Available Commands:
+  bash        Generate the autocompletion script for bash
+  fish        Generate the autocompletion script for fish
+  powershell  Generate the autocompletion script for powershell
+  zsh         Generate the autocompletion script for zsh
+
+Flags:
+  -h, --help   help for completion
+
+Global Flags:
+      --timeout int    override the default HTTP timeout (seconds)
+      --unmask-token   will unmask the API during a request/response dump
+  -v, --verbose        verbose output
+
+Use " completion [command] --help" for more information about a command.

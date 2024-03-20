@@ -22,7 +22,7 @@ config.font = wezterm.font({
    family = base_font,
    weight = 'Regular',
 })
-config.font_size = 11
+config.font_size = 13
 config.font_rules = {
    {
       italic = false,

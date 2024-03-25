@@ -77,10 +77,11 @@ config.harfbuzz_features = {
 }
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Catppuccin Mocha'
+-- config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'tokyonight_moon'
 
 config.automatically_reload_config = true
-config.scrollback_lines = 5000
+config.scrollback_lines = 10000
 config.hyperlink_rules = {
    -- Matches: a URL in parens: (URL)
    {

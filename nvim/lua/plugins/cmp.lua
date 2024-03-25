@@ -2,7 +2,6 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      -- "zbirenbaum/cmp-copilot",
       "rcarriga/cmp-dap",
       "hrsh7th/cmp-cmdline",
     },
